@@ -1,0 +1,21 @@
+<h1>Here is your score</h1>
+<p>What's the longest word you can make?</p>
+
+<div class="d-flex">
+  <% @letters.each do |letter| %>
+    <div class="p-5">
+      <%= letter %>
+    </div>
+  <% end %>
+</div>
+
+<h1> Your word: <%= @word %></h1>
+
+<% if @included %>
+  <h1>Good Job!!</h1>
+<% else %>
+  <h1>Try Again!!</h1>
+<% end %>
+
+<%= link_to "Play Again!", games_new_path %>
+
